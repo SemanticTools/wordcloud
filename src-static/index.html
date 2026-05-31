@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wordcloud Server</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Wordcloud Server</h1>
+      <p class="subtitle">
+        Enter a block of text. We strip common words, look the rest up on
+        Wikipedia, and merge in the meaningful words from those articles.
+      </p>
+    </header>
+
+    <form id="form" class="composer">
+      <textarea
+        id="text"
+        rows="5"
+        placeholder="The Eiffel Tower is a wrought-iron lattice tower in Paris, France..."
+        required
+      ></textarea>
+      <div class="controls">
+        <label for="verbosity">Verbosity</label>
+        <select id="verbosity">
+          <option value="brief">Very brief (×0.25)</option>
+          <option value="concise">Concisely (×0.5)</option>
+          <option value="normal" selected>Normal (×1)</option>
+          <option value="verbose">Verbosely (×2)</option>
+          <option value="full">Full (×10)</option>
+          <option value="max">Max N…</option>
+        </select>
+        <input id="maxn" type="number" min="1" placeholder="N" hidden />
+        <button id="submit" type="submit">Generate wordcloud</button>
+      </div>
+    </form>
+
+    <section id="status" class="status" aria-live="polite"></section>
+
+    <section id="result" class="result" hidden>
+      <p id="summary" class="summary"></p>
+      <div id="cloud" class="cloud"></div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

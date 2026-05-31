@@ -1,0 +1,28 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 3000
+  },
+  "wikipedia": {
+    "apiUrl": "https://en.wikipedia.org/w/api.php",
+    "userAgent": "wordcloud-server/1.0 (https://example.com; dustymurray5151@gmail.com)",
+    "maxLookups": 50,
+    "concurrency": 8,
+    "timeoutMs": 10000,
+    "enabled": true
+  },
+  "model": "wordcloud-1",
+  "minWordLength": 3,
+  "wordsPerPromptWord": 10,
+  "maxWordsHardLimit": 1000,
+  "crawl": {
+    "maxDepth": 1
+  },
+  "maxRequestBytes": 1048576,
+  "training": {
+    "documentCount": 50,
+    "threshold": 0.3,
+    "outputPath": "data/common-words.json",
+    "idfOutputPath": "data/idf-model.json"
+  }
+}

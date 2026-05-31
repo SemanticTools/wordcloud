@@ -1,0 +1,12 @@
+{
+  "name": "wordcloud",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "OpenAI-compatible server that turns text into a Wikipedia-enriched wordcloud.",
+  "main": "src/index.mjs",
+  "scripts": {
+    "start": "node src/index.mjs",
+    "train": "node src/train.mjs",
+    "test": "node --test"
+  }
+}

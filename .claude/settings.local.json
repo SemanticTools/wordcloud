@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pbackup.sh backup *)",
+      "Bash(command -v pbackup.sh)",
+      "Read(//home/d/.local/bin/**)",
+      "Bash(/home/d/Coding/git/devtools/pbackup backup *)",
+      "Bash(npm test *)",
+      "Bash(script/restart.sh)",
+      "Bash(script/status.sh)",
+      "Bash(curl -s localhost:3000/v1/chat/completions -H 'content-type: application/json' -d '{ *)",
+      "Bash(node -e 'const d=JSON.parse\\(require\\(\"fs\"\\).readFileSync\\(0,\"utf8\"\\)\\);const p=JSON.parse\\(d.choices[0].message.content\\);console.log\\(\"META:\",JSON.stringify\\(p.metadata,null,1\\)\\);console.log\\(\"DATA\\(top\\):\",p.data.slice\\(0,8\\).map\\(x=>`${x.word}[s=${x.score.toFixed\\(2\\)},d=${x.distance},seed=${!!x.seed}]`\\).join\\(\" \"\\)\\);')",
+      "Bash(script/train.sh --count 40)",
+      "Bash(node -e 'const d=JSON.parse\\(require\\(\"fs\"\\).readFileSync\\(0,\"utf8\"\\)\\);const p=JSON.parse\\(d.choices[0].message.content\\);console.log\\(\"cap:\",p.metadata.cap,\"returned:\",p.metadata.returned,\"verbosity:\",p.metadata.verbosity\\);console.log\\(p.data.map\\(x=>`${x.word}\\(s=${x.score.toFixed\\(1\\)},seed=${!!x.seed}\\)`\\).join\\(\"  \"\\)\\);')",
+      "Bash(curl -s localhost:3000/)",
+      "Bash(curl -s localhost:3000/v1/chat/completions -H 'content-type: application/json' -d '{\"messages\":[{\"role\":\"user\",\"content\":\"Give me a wordcloud for: What is physics\"}]}')",
+      "Bash(node -e 'const p=JSON.parse\\(JSON.parse\\(require\\(\"fs\"\\).readFileSync\\(0,\"utf8\"\\)\\).choices[0].message.content\\);console.log\\(\"uniquePromptWords:\",p.metadata.uniquePromptWords,\"| cap:\",p.metadata.cap,\"\\(10×1×3\\) | returned:\",p.metadata.returned\\);')"
+    ]
+  }
+}

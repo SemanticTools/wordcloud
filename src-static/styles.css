@@ -1,0 +1,103 @@
+:root {
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --panel-2: #334155;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-ink: #0f172a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.app {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+h1 { margin: 0 0 0.25rem; font-size: 1.9rem; }
+.subtitle { margin: 0 0 1.5rem; color: var(--muted); }
+
+.composer { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; }
+.controls label { color: var(--muted); font-size: 0.9rem; }
+
+select, #maxn {
+  padding: 0.5rem 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--panel-2);
+  background: var(--panel);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+}
+#maxn { width: 5rem; }
+.controls button { align-self: auto; margin-left: auto; }
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 0.9rem 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--panel-2);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+textarea:focus { outline: 2px solid var(--accent); border-color: transparent; }
+
+button {
+  align-self: flex-start;
+  padding: 0.65rem 1.3rem;
+  border: none;
+  border-radius: 0.6rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled { opacity: 0.55; cursor: progress; }
+
+.status { min-height: 1.5rem; margin: 1rem 0; color: var(--muted); }
+.status.error { color: #fca5a5; }
+
+.result { margin-top: 1rem; }
+.summary { font-size: 0.85rem; color: var(--muted); margin: 0 0 0.75rem; }
+
+.cloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 0.7rem;
+  margin-top: 0.75rem;
+  line-height: 1.4;
+}
+
+.tag {
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--panel-2);
+  cursor: default;
+}
+
+.tag.seed {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+  font-weight: 600;
+}

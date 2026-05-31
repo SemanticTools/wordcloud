@@ -1,0 +1,11 @@
+twin = /home/flamsidoo/remote/paddy-top/code/wordcloud
+
+# defaults
+.git/
+node_modules/
+.backup/
+bak*/
+backup*/
+/tmp/
+/*.tgz
+/*.tar
